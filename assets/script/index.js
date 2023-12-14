@@ -38,6 +38,7 @@ function setUsers(users) {
 
   // Create and append <li> elements for each user
   users.forEach((user) => {
+    // Create and append <li> elements for each user
     const li = document.createElement("li");
     li.textContent = `${user.name.first} ${user.name.last} - ${user.email}`;
     usersContainer.appendChild(li);
