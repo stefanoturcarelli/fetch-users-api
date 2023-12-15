@@ -38,16 +38,20 @@ function setUsers(users) {
 
   // Create and append <li> elements for each user
   users.forEach((user) => {
-    // Create and append <li> elements for each user
-    const li = document.createElement("li");
-    li.textContent = `${user.name.first} ${user.name.last} - ${user.email}`;
-    usersContainer.appendChild(li);
+    const div = document.createElement("div");
+    div.classList.add("user");
+    usersContainer.appendChild(div);
 
     // Create and append <img> elements for each user
     const img = document.createElement("img");
-    img.src = user.picture.thumbnail;
+    img.src = user.picture.large;
     img.alt = `${user.name.first} ${user.name.last}`;
-    usersContainer.appendChild(img);
+    div.appendChild(img);
+
+    // Create and append <li> elements for each user
+    const li = document.createElement("li");
+    li.textContent = `${user.name.first} ${user.name.last} - ${user.email}`;
+    div.appendChild(li);
   });
 
   // Hide the spinner after data is loaded
@@ -64,5 +68,3 @@ function hideSpinner() {
 
 // Fetch and display users on page load
 getUsers();
-
-

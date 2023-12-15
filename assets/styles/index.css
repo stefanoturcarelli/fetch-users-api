@@ -120,20 +120,25 @@ a {
 /* !                                 CONTENT                                  */
 /* ! ------------------------------------------------------------------------ */
 
-.img-test {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: dodgerblue;
+.users-container {
+  display: grid;
+  gap: 2rem;
 }
 
-.card-container {
-  width: 30%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 1rem;
-  gap: 2rem;
-  border: 1px solid #ccc;
+.user {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  place-items: center start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  padding: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 60px;
+  border-radius: 50%;
 }
